@@ -1,14 +1,18 @@
-<h1>Authors</h1>
-
-<a href="/authors/new">Create New Author</a>
-
 {{#each authors}}
-<div>
-    <p>Name: {{ this.name }}</p>
-    <p>Bio: {{ this.bio }}</p>
-    <p>Gender: {{ this.gender }}</p>
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card indigo">
+            <div class="card-content white-text">
+                <p>Name: {{ this.name }}</p>
+                <p>Bio: {{ this.bio }}</p>
+                <p>Gender: {{ this.gender }}</p>
+                <p><a href="/authors/{{this._id}}">View Author</a></p>
+                <p><a href="/authors/edit/{{this._id}}">Edit Author</a></p>
+                <p><a href="/authors/{{this._id}}?_method=DELETE">Delete Author</a></p>
+            </div>
+        </div>
+    </div>
 </div>
-{{!-- <a href="/authors/{{this._id}}">View Author</a> --}}
-{{!-- <a href="/authors/{{this._id}}?_method=DELETE">Delete Author</a> --}}
+
 
 {{/each}}

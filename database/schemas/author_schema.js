@@ -12,8 +12,8 @@ const AuthorSchema = new Schema({
     },
     gender: {
         type: String,
-        enum: ['male', 'female', 'non binary'],
-        default: 'non binary'
+        enum: ['Male', 'Female', 'Non-binary'],
+        default: 'Non-binary'
     }
 });
 
